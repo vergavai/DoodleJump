@@ -1,0 +1,4 @@
+{
+	"name": "ObjectGenerator",
+	"references":[ "GUID:b86abe59bef1a1d43b07fb90723543f3", "GUID:553d1bbed7b94e21854fc63203e14ed9", "GUID:8fd837e75e32ff547859b07a00bf9599", "GUID:83e3b11286444be0b6e36b950c116805", "GUID:9589ccb17df046ccbf301c140c875e20" ]
+}

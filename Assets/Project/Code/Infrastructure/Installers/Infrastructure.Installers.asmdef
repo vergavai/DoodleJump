@@ -1,0 +1,4 @@
+{
+	"name": "Infrastructure.Installers",
+	"references":[ "GUID:0d8beb7f090555447a6cf5ce9e54dbb4", "GUID:53e0fda8262fffe46a0343172c8326d5", "GUID:8fd837e75e32ff547859b07a00bf9599", "GUID:4074935fe4d7bc14d85232446437ca68", "GUID:b86abe59bef1a1d43b07fb90723543f3", "GUID:c08e806377124189afc2af163b97352f", "GUID:da5dd7c44dabccb40a1c162b609183dd", "GUID:a24ff610a7d84003aba8d5cd9f87d3db", "GUID:09be67eb8b4b4fb0aa8ab186eec62cd7" ]
+}

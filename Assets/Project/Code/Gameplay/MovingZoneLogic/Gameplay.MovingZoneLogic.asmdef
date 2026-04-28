@@ -1,0 +1,4 @@
+{
+	"name": "Gameplay.MovingZoneLogic",
+	"references":[ "GUID:8fd837e75e32ff547859b07a00bf9599", "GUID:a24ff610a7d84003aba8d5cd9f87d3db" ]
+}

@@ -1,0 +1,4 @@
+﻿{
+  "name": "UI.CooldownSliderLogic",
+  "references":[ "GUID:a24ff610a7d84003aba8d5cd9f87d3db", "GUID:83e3b11286444be0b6e36b950c116805", "GUID:9589ccb17df046ccbf301c140c875e20" ]
+}

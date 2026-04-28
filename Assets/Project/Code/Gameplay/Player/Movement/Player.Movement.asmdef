@@ -1,0 +1,4 @@
+﻿{
+  "name": "Player.Movement",
+  "references":[ "GUID:b86abe59bef1a1d43b07fb90723543f3", "GUID:4074935fe4d7bc14d85232446437ca68", "GUID:83e3b11286444be0b6e36b950c116805", "GUID:9589ccb17df046ccbf301c140c875e20" ]
+}

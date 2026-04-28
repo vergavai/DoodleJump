@@ -1,0 +1,18 @@
+{
+    "name": "Ui.Score",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8fd837e75e32ff547859b07a00bf9599",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:09be67eb8b4b4fb0aa8ab186eec62cd7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

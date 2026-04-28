@@ -1,0 +1,4 @@
+{
+	"name": "Menu.SettingsMenu",
+	"references":[ "GUID:aac2ef39a1f041b1bf409c50fda22fe4", "GUID:74329fc57d55ada4e81497725e68d219" ]
+}
