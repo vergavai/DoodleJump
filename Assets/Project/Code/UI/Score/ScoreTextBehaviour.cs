@@ -1,5 +1,4 @@
-using Project.Code.Gameplay.Player;
-using Project.Code.Gameplay.Player.ScoreLogic;
+using Project.Code.Gameplay.Player.Score;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -22,9 +21,14 @@ namespace Project.Code.UI.Score
             _scoreText = new ScoreText(_text, _playerScore);
         }
 
-        private void Update()
+        private void OnEnable()
         {
-            _scoreText.UpdateScoreText();
+            _scoreText.SubscribeToEvents();
+        }
+
+        private void OnDisable()
+        {
+            _scoreText.UnsubscribeFromEvents();
         }
     }
 }

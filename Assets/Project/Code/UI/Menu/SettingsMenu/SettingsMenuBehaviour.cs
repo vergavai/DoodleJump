@@ -4,7 +4,7 @@ namespace Project.Code.UI.Menu.SettingsMenu
 {
     public class SettingsMenuBehaviour : MenuBehaviour
     {
-        protected override BaseMenu.Menu CreateMenu()
+        protected override BaseMenu.CanvasGroupMenu CreateMenu()
         {
             return new SettingsMenu(_canvasGroup);
         }

@@ -4,11 +4,11 @@ namespace Project.Code.Gameplay.Platforms
 {
     public class PlatformDetector
     {
-        public event Action<float> PlatformDetected;
+        public event Action<float> JumpRequested;
 
-        public void InvokePlatformDetected(float number)
+        public void InvokeJumpRequest(float number)
         {
-            PlatformDetected?.Invoke(number);
+            JumpRequested?.Invoke(number);
         }
     }
 }

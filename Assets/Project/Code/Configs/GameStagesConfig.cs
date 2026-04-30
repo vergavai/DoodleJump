@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Code.Configs
@@ -8,10 +7,11 @@ namespace Project.Code.Configs
     {
         [SerializeField] private int[] _scoreThresholds;
         [SerializeField] private int[] _objectsToAddPerStage;
-        [SerializeField] private float[] _maxYOffsetPerStage;
-    
+        [SerializeField] private float[] _extraYOffsetPerStage;
+        
+        public int StagesCount => _scoreThresholds.Length;
         public int[] ScoreThresholds => _scoreThresholds;
         public int[] ObjectsToAddPerStage => _objectsToAddPerStage;
-        public float[] MaxYOffsetPerStage => _maxYOffsetPerStage;
+        public float[] ExtraYOffsetPerStage => _extraYOffsetPerStage;
     }
 }

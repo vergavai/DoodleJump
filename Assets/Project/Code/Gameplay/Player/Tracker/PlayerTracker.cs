@@ -5,9 +5,9 @@ namespace Project.Code.Gameplay.Player.Tracker
 {
     public class PlayerTracker
     {
-        private PlayerMovementBehaviour _player;
-        private Transform _transform;
-        private float _yOffset;
+        private readonly PlayerMovementBehaviour _player;
+        private readonly Transform _transform;
+        private readonly float _yOffset;
         
         public PlayerTracker(PlayerMovementBehaviour player, Transform transform, float yOffset)
         {
@@ -18,6 +18,8 @@ namespace Project.Code.Gameplay.Player.Tracker
 
         public void UpdatePosition()
         {
+            if (!_player) return;
+            
             _transform.position = new Vector3(_transform.position.x, _player.transform.position.y - _yOffset, _transform.position.z);
         }
     }

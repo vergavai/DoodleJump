@@ -1,13 +1,12 @@
-﻿using Project.Code.Gameplay.Player;
-using Project.Code.Gameplay.Player.ScoreLogic;
+﻿using Project.Code.Gameplay.Player.Score;
 using TMPro;
+using UnityEngine;
 
 namespace Project.Code.UI.Score
 {
     public class ScoreText
     {
-        TextMeshProUGUI _text;
-        
+        private TextMeshProUGUI _text;
         private PlayerScore _playerScore;
         
         public ScoreText(TextMeshProUGUI text, PlayerScore playerScore)
@@ -16,9 +15,21 @@ namespace Project.Code.UI.Score
             _playerScore = playerScore;
         }
 
-        public void UpdateScoreText()
+        public void SubscribeToEvents()
         {
-            _text.text = $"Score: {_playerScore.MaxScore}";
+            _playerScore.ScoreChanged += UpdateScoreText;
+        }
+
+        public void UnsubscribeFromEvents()
+        {
+            _playerScore.ScoreChanged -= UpdateScoreText;
+        }
+
+        public void UpdateScoreText(float score)
+        {
+            string scoreText = $"Score: {Mathf.Round(score)}";
+
+            _text.text = scoreText;
         }
     }
 }

@@ -2,7 +2,7 @@
 using Project.Code.Configs;
 using Project.Code.Constants;
 using Project.Code.Gameplay.Player;
-using Project.Code.Gameplay.Player.ScoreLogic;
+using Project.Code.Gameplay.Player.Score;
 using UnityEngine;
 
 namespace Project.Code.Gameplay.GameStages
@@ -15,26 +15,26 @@ namespace Project.Code.Gameplay.GameStages
         private int[] _thresholds;
 
         public event Action<int> OnStageReached;
-
-        public ScoreObserver(PlayerScore playerScore)
+        
+        public ScoreObserver(PlayerScore playerScore,  GameStagesConfig config)
         {
             _playerScore = playerScore;
-            _config = Resources.Load<GameStagesConfig>(ConfigPaths.GameStagesConfig);
+            _config = config;
             _stageAchieved = new bool[]{false, false};
             _thresholds = _config.ScoreThresholds;
         }
 
         public void SubscribeToEvents()
         {
-            _playerScore.ScoreChanged += OnScoreBehaviourChanged;
+            _playerScore.ScoreChanged += OnScoreChanged;
         }
 
         public void UnsubscribeFromEvents()
         {
-            _playerScore.ScoreChanged -= OnScoreBehaviourChanged;
+            _playerScore.ScoreChanged -= OnScoreChanged;
         }
 
-        private void OnScoreBehaviourChanged(float score)
+        private void OnScoreChanged(float score)
         {
             for (int i = 0; i < _thresholds.Length; i++)
             {

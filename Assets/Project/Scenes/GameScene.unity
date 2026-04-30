@@ -1154,8 +1154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503d90ed14835584d83be954b1999fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _platformGenerator: {fileID: 1877602817}
   _location: {fileID: 1756771097}
+  _platformContainer: {fileID: 1877602816}
   _playerPrefab: {fileID: 8964547511083090611, guid: 919522a6593b19847a1cc5b04e1012cb, type: 3}
+  _playerConfig: {fileID: 11400000, guid: 989cc46d15a4e914c8489d3a5676a56a, type: 2}
+  _gameStagesConfig: {fileID: 11400000, guid: 5a40f7f5a22a40f4a8640b945af49bb5, type: 2}
+  _platformGeneratorConfig: {fileID: 11400000, guid: b78a6a6f441924b49951ebe3172236f8, type: 2}
+  _camera: {fileID: 519420031}
 --- !u!114 &1079734232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,11 +2018,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b904c3a46ae7442d8b08e7017864331d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _platformsContainer: {fileID: 1877602815}
+  _platformContainer: {fileID: 0}
   _minYOffset: 0.5
   _maxYOffset: 1
   _yGenerationThreshold: 15
   _spawnRangeX: 2.5
+  _disableOffset: 5
+  platformsOnStart: 50
 --- !u!1 &2071656210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,8 +2208,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1079734233}
   - {fileID: 8083395394933577036}
   - {fileID: 1877602816}
   - {fileID: 628899926}
   - {fileID: 114731891}
+  - {fileID: 1079734233}

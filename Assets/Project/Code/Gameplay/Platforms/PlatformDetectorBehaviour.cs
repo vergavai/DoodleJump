@@ -8,19 +8,19 @@ namespace Project.Code.Gameplay.Platforms
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlatformDetectorBehaviour : MonoBehaviour
     {
+        [SerializeField] private float _verticalOffset;
+        
         private PlayerConfig _config;
         private Rigidbody2D _rigidbody;
         private Collider2D _collider;
         private PlatformDetector _detector;
 
-        private float _verticalOffset = 0.5f;
-
         [Inject]
-        public void Construct(PlatformDetector detector)
+        public void Construct(PlatformDetector detector, PlayerConfig config)
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _collider = GetComponent<Collider2D>();
-            _config = Resources.Load<PlayerConfig>(ConfigPaths.PlayerConfig);
+            _config = config;
             _detector = detector;
         }
 
@@ -39,10 +39,10 @@ namespace Project.Code.Gameplay.Platforms
                             other.gameObject.SetActive(false);
                             break;
                         case PlatformType.Platform:
-                            _detector.InvokePlatformDetected(_config.PlatformJumpForce);
+                            _detector.InvokeJumpRequest(_config.PlatformJumpForce);
                             break;
                         case PlatformType.SpringPlatform:
-                            _detector.InvokePlatformDetected(_config.SpringForce);
+                            _detector.InvokeJumpRequest(_config.SpringForce);
                             break;
                     }
                 }

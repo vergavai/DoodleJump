@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Project.Code.UI.Menu.PauseMenu
 {
-    public class PauseMenu : BaseMenu.Menu
+    public class PauseMenu : BaseMenu.CanvasGroupMenu
     {
         public PauseMenu(CanvasGroup canvasGroup) : base(canvasGroup)
         {

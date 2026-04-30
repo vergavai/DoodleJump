@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e60fc84ce91aa34d8c8b2526bc3322b, type: 3}
   m_Name: GameStagesConfig
   m_EditorClassIdentifier: 
-  _scoreThresholds: f4010000dc050000
+  _scoreThresholds: 64000000dc050000
   _objectsToAddPerStage: 050000000a000000
-  _maxYOffsetPerStage:
-  - 1.5
-  - 2
+  _extraYOffsetPerStage:
+  - 0.35
+  - 0.5

@@ -9,17 +9,17 @@ namespace Project.Code.UI.Menu.BaseMenu
         [SerializeField] protected Button _closeButton;
         [SerializeField] protected CanvasGroup _canvasGroup;
         
-        protected Menu _menu;
+        protected CanvasGroupMenu _menu;
+
+        private void Awake()
+        {
+            _menu = CreateMenu();
+        }
 
         private void OnEnable()
         {
             _openButton.onClick.AddListener(_menu.Open);
             _closeButton.onClick.AddListener(_menu.Close);
-        }
-        
-        private void Awake()
-        {
-            _menu = CreateMenu();
         }
 
         private void OnDisable()
@@ -28,6 +28,6 @@ namespace Project.Code.UI.Menu.BaseMenu
             _closeButton.onClick.RemoveListener(_menu.Close);
         }
 
-        protected abstract Menu CreateMenu();
+        protected abstract CanvasGroupMenu CreateMenu();
     }
 }

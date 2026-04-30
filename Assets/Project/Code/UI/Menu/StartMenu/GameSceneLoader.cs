@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Project.Code.UI.Menu.StartMenu
@@ -8,6 +9,7 @@ namespace Project.Code.UI.Menu.StartMenu
         
         public void LoadGameScene()
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene(GameScene);
         }
     }

@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using Project.Code.UI.Menu.StartMenu;
+﻿using Project.Code.UI.Menu.StartMenu;
 using Zenject;
 
 namespace Project.Code.Infrastructure.Installers

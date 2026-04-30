@@ -2,8 +2,8 @@
 {
     public static class ConfigPaths
     {
-        public static string PlayerConfig = "Configs/PlayerConfig";
-        public static string GameStagesConfig = "Configs/GameStagesConfig";
-        public static string PlatformGeneratorConfig = "Configs/PlatformGeneratorConfig";
+        public const string PlayerConfig = "Configs/PlayerConfig";
+        public const string GameStagesConfig = "Configs/GameStagesConfig";
+        public const string PlatformGeneratorConfig = "Configs/PlatformGeneratorConfig";
     }
 }
