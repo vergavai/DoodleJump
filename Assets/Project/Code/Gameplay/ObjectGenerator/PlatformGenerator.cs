@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using Project.Code.Configs;
-using Project.Code.Constants;
-using Project.Code.Gameplay.Platforms;
 using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
@@ -10,8 +8,6 @@ namespace Project.Code.Gameplay.ObjectGenerator
 {
     public class PlatformGenerator : MonoBehaviour
     {
-        [SerializeField] private Transform _platformContainer;
-
         [SerializeField] private float _minYOffset;
         [SerializeField] private float _maxYOffset;
         [SerializeField] private float _yGenerationThreshold;

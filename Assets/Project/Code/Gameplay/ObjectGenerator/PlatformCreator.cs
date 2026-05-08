@@ -11,7 +11,7 @@ namespace Project.Code.Gameplay.ObjectGenerator
         private MovingPlatformFactory _movingPlatformFactory;
         private PlatformGeneratorConfig _generatorConfig;
         private GameStagesConfig _gameStagesConfig;
-        private PlatformContainer _platformContainer;
+        private Transform _platformContainer;
         private ObjectPool _pool;
 
         public PlatformCreator(PlatformFactory platformFactory, MovingPlatformFactory movingPlatformFactory,
@@ -22,18 +22,18 @@ namespace Project.Code.Gameplay.ObjectGenerator
             _movingPlatformFactory = movingPlatformFactory;
             _generatorConfig = generatorConfig;
             _gameStagesConfig = gameStagesConfig;
-            _platformContainer = platformContainer;
+            _platformContainer = platformContainer.Container;
             _pool = pool;
         }
 
         public void AddPlatforms(out List<List<GameObject>> platformsToAdd)
         {
             CreateAndAddPlatforms(_generatorConfig.PlatformPrefab, _generatorConfig.PlatformsCount,
-                _platformContainer.Container);
+                _platformContainer);
             CreateAndAddPlatforms(_generatorConfig.SpringPrefab, _generatorConfig.SpringsCount,
-                _platformContainer.Container);
+                _platformContainer);
             CreateAndAddPlatforms(_generatorConfig.BreakablePlatformPrefab, _generatorConfig.BreakablePlatformsCount,
-                _platformContainer.Container);
+                _platformContainer);
             
             CreateStagePlatforms(out platformsToAdd);
         }
@@ -59,7 +59,7 @@ namespace Project.Code.Gameplay.ObjectGenerator
             for (int i = 0; i < _gameStagesConfig.StagesCount; i++)
             {
                 List<MovingPlatform> movingPlatforms = _movingPlatformFactory
-                    .CreateMany(_gameStagesConfig.ObjectsToAddPerStage[i], _platformContainer.Container);
+                    .CreateMany(_gameStagesConfig.ObjectsToAddPerStage[i], _platformContainer);
 
                 List<GameObject> platformObjects = new List<GameObject>();
 

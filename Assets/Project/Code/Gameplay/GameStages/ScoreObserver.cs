@@ -1,9 +1,6 @@
 ﻿using System;
 using Project.Code.Configs;
-using Project.Code.Constants;
-using Project.Code.Gameplay.Player;
 using Project.Code.Gameplay.Player.Score;
-using UnityEngine;
 
 namespace Project.Code.Gameplay.GameStages
 {
@@ -20,7 +17,7 @@ namespace Project.Code.Gameplay.GameStages
         {
             _playerScore = playerScore;
             _config = config;
-            _stageAchieved = new bool[]{false, false};
+            _stageAchieved = new bool[_config.StagesCount];{};
             _thresholds = _config.ScoreThresholds;
         }
 

@@ -1,13 +1,10 @@
-﻿using Project.Code.Gameplay.ObjectGenerator;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace Project.Code.Gameplay.GameStages
 {
     public class StageProgressionBehaviour : MonoBehaviour
     {
-        [SerializeField] private PlatformGenerator _platformGenerator;
-        
         private StageProgression _stageProgression;
 
         [Inject]

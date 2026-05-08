@@ -7,7 +7,7 @@ namespace Project.Code.UI.Score
 {
     public class ScoreTextBehaviour : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI _text;
+        [SerializeField] private TextMeshProUGUI _text;
         
         private PlayerScore _playerScore;
         
